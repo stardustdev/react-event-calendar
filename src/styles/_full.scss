@@ -1,0 +1,132 @@
+.dc--full {
+
+  // Base // --------------------------------------------------  
+  .dc-month,
+  .dc-month--addons {
+    width: $dc-full-width;
+  }
+
+
+  // Day // --------------------------------------------------
+
+  .dc-day,
+  .dc-daysofweek-day {
+    display: inline-block;
+    flex: 0 0 auto;
+    height: $dc-full-day-height;
+    position: relative;
+    width: $dc-full-day-width;
+
+    border: 1px $dc-day-border-color solid;
+  }
+
+  .dc-day {
+    &:first-child,
+    &:last-child {
+      background: $dc-weekend-background-color;
+    }
+  }
+
+  .dc-day--outOfMonth .dc-entry,
+  .dc-day--outOfMonth .dc-day-header{
+    opacity: 0.4;
+  }
+
+  .dc-day--today {
+    background: #eee;
+  }
+
+  .dc-day-header {
+    text-align: right;
+    margin: 0.3em;
+  }
+  
+  .dc-daysofweek-day {
+    border-width: 0 0 1px 0;
+    height: 2em;
+    padding: 0.5em;
+    text-align: right;
+  }
+
+
+
+  // Entry // --------------------------------------------------
+
+  .dc-entry {
+    background: #0085BB;
+    border: 1px #fff solid;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    padding: 0.1em 0.3em;
+    width: 100%;
+  }
+
+
+  // Addons:Misc // --------------------------------------------------
+
+  .dc-addons-title {
+    color: $dc-title-color;
+    text-align: left;
+    background-color: $dc-title-background-color;
+    padding: 1em;
+  }
+
+
+  // Addons:Controls // --------------------------------------------------
+
+  .dc-addons-controls {
+    line-height: 2em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+    top: 0;
+    width: 120px;
+    
+    button {
+      display: none;
+    }
+  }
+
+  .dc-addons-controls-prev,
+  .dc-addons-controls-next,
+  .dc-addons-controls-today {
+    float: left;
+    margin-top: 1em;
+  } 
+
+  .dc-addons-controls-today {
+    margin: 0.7em 0.5em 0 0.5em;
+  }
+
+  .dc-addons-controls-next {
+    &:after {
+      @include m-triangle(10px, #fff, left);
+      content: '';
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+
+  .dc-addons-controls-prev {
+    &:before {
+      @include m-triangle(10px, #fff, right);
+      content: '';
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+
+  .dc-addons-controls-today {
+    button {
+      background: transparent;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1em;
+      outline: none;
+    }
+  }
+
+} // namespace

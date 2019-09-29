@@ -1,0 +1,113 @@
+
+.dc--mini {
+
+
+
+  // Base // --------------------------------------------------  
+  .dc-month,
+  .dc-month--addons {
+    width: $dc-mini-width;
+  }
+
+
+
+  // Day // --------------------------------------------------
+
+  .dc-day,
+  .dc-daysofweek-day {
+    display: inline-block;
+    flex: 0 0 auto;
+    height: $dc-mini-day-height;
+    position: relative;
+    text-align: center;
+    width: $dc-mini-day-width;
+  }
+
+  .dc-day {
+    &:first-child,
+    &:last-child {
+      background: $dc-weekend-background-color;
+    }
+  }
+
+  .dc-daysofweek-day {
+    color: $dc-daysofweek-color;
+    font-size: 0.6em;
+    height: auto;
+    padding-top: 0.5em;
+    text-transform: uppercase;
+  
+    &:first-letter {
+      font-size: 1.2em;
+    }
+  }
+
+  .dc-day--outOfMonth {
+    opacity: 0.4;
+  }
+
+  .dc-day--today {
+    background: #eee;
+  }  
+
+  .dc-day-header {
+    display: table-cell;
+    height: $dc-mini-day-height;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: $dc-mini-day-width;
+  }
+
+
+
+  // Addons:Misc // --------------------------------------------------
+
+  .dc-addons-title {
+    color: $dc-title-color;
+    text-align: center;
+    background-color: $dc-title-background-color;
+    padding: 1em;   
+  }
+
+   // Addons:Controls // --------------------------------------------------
+
+  .dc-addons-controls {
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 1em;
+    width: 100%;
+
+    button {
+      display: none;
+    }
+  }
+
+  .dc-addons-controls-today {
+    display: none;
+  } 
+
+ .dc-addons-controls-next {
+    float: right;
+
+    &:after {
+      @include m-triangle(8px, #fff, left);
+      content: '';
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+
+ .dc-addons-controls-prev {
+    float: left;
+
+    &:before {
+      @include m-triangle(8px, #fff, right);
+      content: '';
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}

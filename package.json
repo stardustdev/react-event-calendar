@@ -1,0 +1,47 @@
+{
+  "name": "data-calendar",
+  "version": "0.0.5",
+  "description": "A React calendar component designed to be flexible in presenting events",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./bin/build.sh",
+    "build:example": "./bin/build-example.sh",
+    "build:js": "./bin/build-js.sh",
+    "build:lib": "./bin/build-lib.sh",
+    "build:styles": "./bin/build-styles.sh",
+    "build:vendor": "./bin/build-vendor.sh",
+    "lint:css": "scss-lint -f JSON -o ./test/logs/scss-lint.json ./src/styles/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeojz/data-calendar.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "calendar",
+    "month"
+  ],
+  "author": "Gerald Yeo <contact@fusedthought.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeojz/data-calendar/issues"
+  },
+  "homepage": "https://github.com/yeojz/data-calendar",
+  "devDependencies": {
+    "autoprefixer": "^5.1.0",
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "clean-css": "^3.1.4",
+    "mocha": "^2.2.1",
+    "node-sass": "^2.0.1",
+    "reactify": "^1.0.0",
+    "uglify-js": "^2.4.17"
+  },
+  "dependencies": {
+    "moment": "^2.9.0",
+    "react": "^0.13.1"
+  }
+}
